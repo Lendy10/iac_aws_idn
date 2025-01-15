@@ -53,6 +53,12 @@ This folder contains the static website files:
 3. **Route 53**:
    - Manages DNS records for the subdomain `new-timmy-7.serverless.my.id`.
 
+## Limitations ⚠️
+Despite successful deployment, there is a limitation with pointing the domain `new-timmy-7.serverless.my.id` to the appropriate CloudFront distribution. After performing analysis using `dig`, `nslookup`, and `whois`, it was determined that the domain registrar is external (not managed through Route 53). Adjustments to the nameserver settings on the external platform are required, which were not possible in this deployment. As a result, the domain `serverless.my.id` cannot be resolved.
+
+Instead, the application is accessible via the CloudFront URL: [https://d1i269u8v9ihg0.cloudfront.net/](https://d1i269u8v9ihg0.cloudfront.net/).
+
+
 ### CI/CD Pipeline
 A GitHub Actions pipeline is configured to:
 
