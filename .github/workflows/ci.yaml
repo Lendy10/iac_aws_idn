@@ -24,7 +24,7 @@ jobs:
 
     - name: Sync Files to S3
       run: |
-        aws s3 sync ./web s3://new-timmy-7.serverless.my.id --acl public-read --delete
+        aws s3 sync ./web s3://new-timmy-7.serverless.my.id/web --acl public-read --delete
 
     # Activate on production when TTL is set, currently set to off
     # - name: Invalidate CloudFront Cache
